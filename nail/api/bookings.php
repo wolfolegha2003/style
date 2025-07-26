@@ -150,6 +150,10 @@ function createBooking() {
     $stmt->execute([$user['id']]);
     $userData = $stmt->fetch();
     
+    if (!$userData['name']) {
+        sendError('Необходимо заполнить имя в профиле');
+    }
+    
     // Создаем бронирование
     $stmt = $pdo->prepare("
         INSERT INTO bookings 

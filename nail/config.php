@@ -145,11 +145,16 @@ function verifyToken($token) {
 
 // Функция для получения текущего пользователя
 function getCurrentUser() {
-    $headers = getallheaders();
     $token = null;
     
-    if (isset($headers['Authorization'])) {
-        $token = str_replace('Bearer ', '', $headers['Authorization']);
+    // Поддержка разных способов получения заголовков
+    if (function_exists('getallheaders')) {
+        $headers = getallheaders();
+        if (isset($headers['Authorization'])) {
+            $token = str_replace('Bearer ', '', $headers['Authorization']);
+        }
+    } elseif (isset($_SERVER['HTTP_AUTHORIZATION'])) {
+        $token = str_replace('Bearer ', '', $_SERVER['HTTP_AUTHORIZATION']);
     }
     
     if (!$token) return null;
@@ -193,8 +198,10 @@ function validateEmail($email) {
 
 // Функция для валидации телефона
 function validatePhone($phone) {
+    if (empty($phone)) return false;
     $phone = preg_replace('/[^0-9+]/', '', $phone);
-    return preg_match('/^\+7\d{10}$/', $phone);
+    // Поддерживаем российские номера в разных форматах
+    return preg_match('/^(\+7|8|7)\d{10}$/', $phone) || preg_match('/^\+\d{10,15}$/', $phone);
 }
 
 // Функция для безопасной работы с GET параметрами

@@ -256,6 +256,7 @@ function updateAuthFunctions() {
             modal.hide();
             
             // Обновляем UI
+            window.currentUser = response.user;
             updateUIForLoggedInUser(response.user);
             showSuccessToast('Успешный вход в систему!');
             
@@ -293,6 +294,7 @@ function updateAuthFunctions() {
             modal.hide();
             
             // Обновляем UI
+            window.currentUser = response.user;
             updateUIForLoggedInUser(response.user);
             showSuccessToast('Регистрация прошла успешно!');
             
@@ -305,13 +307,16 @@ function updateAuthFunctions() {
     window.handleBookingSubmit = async function(event) {
         event.preventDefault();
         
-        if (!UserManager.isLoggedIn()) {
-            showErrorToast('Необходимо войти в систему для записи');
-            return;
-        }
-        
         const form = event.target;
         const formData = new FormData(form);
+        
+        if (!UserManager.isLoggedIn()) {
+            // Если не авторизован, показываем модальное окно входа
+            showErrorToast('Для записи необходимо войти в систему');
+            const loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
+            loginModal.show();
+            return;
+        }
         
         const bookingData = {
             service_id: formData.get('service'),
@@ -398,6 +403,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Проверяем, авторизован ли пользователь
     if (UserManager.isLoggedIn()) {
         const user = UserManager.getCurrentUser();
+        window.currentUser = user;
         updateUIForLoggedInUser(user);
         
         // Обновляем данные пользователя
