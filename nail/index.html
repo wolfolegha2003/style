@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nail & Style - Маникюрный салон премиум класса</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand" href="#" data-aos="fade-right">
+                <i class="bi bi-gem text-primary"></i>
+                <span class="fw-bold">Nail & Style</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Главная</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="#services">Услуги</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#gallery">Галерея</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#reviews">Отзывы</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Контакты</a></li>
+                                                <li class="nav-item profile-link" style="display: none;"><a class="nav-link" href="profile.html">Профиль</a></li>
+                        <li class="nav-item">
+                            <button class="btn btn-primary btn-lg ms-2" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                                Записаться
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-outline-primary btn-lg ms-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                <i class="bi bi-person-circle"></i> Вход
+                            </button>
+                        </li>
+                        <!-- Theme toggle button will be added here by JavaScript -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <h1 class="display-3 fw-bold mb-4" style="color: #ffffff; text-shadow: 2px 2px 8px rgba(0,0,0,0.7);">
+                        Ваши ногти - наше <span class="typewriter-gradient">искусство</span>
+                    </h1>
+                    <p class="lead mb-4" style="color: #f8f9fa; text-shadow: 1px 1px 4px rgba(0,0,0,0.6);">
+                        Профессиональный маникюр и педикюр в центре города. 
+                        Используем только премиальные материалы и современные техники.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                            <i class="bi bi-calendar-check me-2"></i>Записаться онлайн
+                        </button>
+                        <button class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#servicesModal">
+                            <i class="bi bi-list-stars me-2"></i>Наши услуги
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="400">
+                    <div class="hero-stats">
+                        <div class="row text-center">
+                            <div class="col-4">
+                                <div class="stat-card glass-effect">
+                                    <h3 class="counter" data-target="500" style="color: #ffffff; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); font-weight: 700;">0</h3>
+                                    <p style="color: #f8f9fa; text-shadow: 1px 1px 2px rgba(0,0,0,0.6);">Счастливых клиентов</p>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="stat-card glass-effect">
+                                    <h3 class="counter" data-target="5" style="color: #ffffff; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); font-weight: 700;">0</h3>
+                                    <p style="color: #f8f9fa; text-shadow: 1px 1px 2px rgba(0,0,0,0.6);">Лет опыта</p>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="stat-card glass-effect">
+                                    <h3 class="counter" data-target="15" style="color: #ffffff; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); font-weight: 700;">0</h3>
+                                    <p style="color: #f8f9fa; text-shadow: 1px 1px 2px rgba(0,0,0,0.6);">Видов услуг</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#services" class="text-white">
+                <i class="bi bi-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-4 fw-bold mb-3" style="color: var(--primary);">Наши услуги</h2>
+                <p class="lead text-muted">Широкий спектр услуг для красоты ваших ногтей</p>
+            </div>
+
+            <div id="servicesCarousel" class="carousel slide" data-bs-ride="carousel" data-aos="fade-up" data-aos-delay="200">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="service-card hover-scale">
+                                    <div class="service-icon">
+                                        <i class="bi bi-hand-index"></i>
+                                    </div>
+                                    <h4>Классический маникюр</h4>
+                                    <p>Профессиональная обработка кутикулы, придание формы ногтям и покрытие лаком.</p>
+                                    <div class="price">от 1500₽</div>
+                                    <button class="btn btn-outline-primary btn-sm mt-3" data-service="Классический маникюр" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                                        Записаться
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="service-card hover-scale">
+                                    <div class="service-icon">
+                                        <i class="bi bi-palette"></i>
+                                    </div>
+                                    <h4>Гель-лак</h4>
+                                    <p>Стойкое покрытие, которое держится до 3 недель. Богатая палитра цветов.</p>
+                                    <div class="price">от 2000₽</div>
+                                    <button class="btn btn-outline-primary btn-sm mt-3" data-service="Гель-лак" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                                        Записаться
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="service-card hover-scale">
+                                    <div class="service-icon">
+                                        <i class="bi bi-stars"></i>
+                                    </div>
+                                    <h4>Дизайн ногтей</h4>
+                                    <p>Уникальные дизайны: стразы, рисунки, градиент, французский маникюр.</p>
+                                    <div class="price">от 2500₽</div>
+                                    <button class="btn btn-outline-primary btn-sm mt-3" data-service="Дизайн ногтей" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                                        Записаться
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="service-card hover-scale">
+                                    <div class="service-icon">
+                                        <i class="bi bi-plus-circle"></i>
+                                    </div>
+                                    <h4>Наращивание</h4>
+                                    <p>Наращивание ногтей гелем или акрилом. Различные формы и длины.</p>
+                                    <div class="price">от 3000₽</div>
+                                    <button class="btn btn-outline-primary btn-sm mt-3" data-service="Наращивание" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                                        Записаться
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="service-card hover-scale">
+                                    <div class="service-icon">
+                                        <i class="bi bi-brush"></i>
+                                    </div>
+                                    <h4>Укрепление ногтей</h4>
+                                    <p>Профессиональное укрепление натуральных ногтей специальными составами.</p>
+                                    <div class="price">от 1800₽</div>
+                                    <button class="btn btn-outline-primary btn-sm mt-3" data-service="Укрепление ногтей" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                                        Записаться
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="service-card hover-scale">
+                                    <div class="service-icon">
+                                        <i class="bi bi-heart"></i>
+                                    </div>
+                                    <h4>Педикюр</h4>
+                                    <p>Профессиональный уход за стопами и ногтями на ногах.</p>
+                                    <div class="price">от 2200₽</div>
+                                    <button class="btn btn-outline-primary btn-sm mt-3" data-service="Педикюр" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                                        Записаться
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-control-prev" type="button" data-bs-target="#servicesCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#servicesCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+                
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="1"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-4 fw-bold mb-3" style="color: var(--primary);">Наши работы</h2>
+                <p class="lead text-muted">Посмотрите на результаты нашего мастерства</p>
+            </div>
+
+            <div class="text-center mb-4" data-aos="fade-up" data-aos-delay="200">
+                <ul class="nav nav-pills justify-content-center gallery-filter" id="galleryFilter">
+                    <li class="nav-item">
+                        <button class="nav-link active" data-filter="all">Все работы</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-filter="manicure">Маникюр</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-filter="design">Дизайн</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-filter="extension">Наращивание</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="row g-3" id="galleryGrid">
+                <!-- Gallery items will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-4 fw-bold mb-3" style="color: var(--primary);">Отзывы клиентов</h2>
+                <p class="lead text-muted">Что говорят о нас наши клиенты</p>
+            </div>
+
+            <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel" data-aos="fade-up" data-aos-delay="200">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="review-card">
+                                    <div class="stars mb-3 text-center">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <blockquote class="blockquote text-center">
+                                        <p class="mb-4">"Потрясающий сервис! Мастера настоящие профессионалы. Маникюр держится уже 3 недели и выглядит как в первый день. Обязательно вернусь!"</p>
+                                    </blockquote>
+                                    <div class="review-author text-center">
+                                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=80&h=80&fit=crop&crop=face" alt="Анна" class="rounded-circle mb-2">
+                                        <h6 class="mb-0">Анна Петрова</h6>
+                                        <small class="text-muted">Постоянный клиент</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="review-card">
+                                    <div class="stars mb-3 text-center">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <blockquote class="blockquote text-center">
+                                        <p class="mb-4">"Лучший салон в городе! Атмосфера очень уютная, мастера внимательные и профессиональные. Дизайн ногтей просто шедевр!"</p>
+                                    </blockquote>
+                                    <div class="review-author text-center">
+                                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face" alt="Елена" class="rounded-circle mb-2">
+                                        <h6 class="mb-0">Елена Сидорова</h6>
+                                        <small class="text-muted">VIP клиент</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="review-card">
+                                    <div class="stars mb-3 text-center">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <blockquote class="blockquote text-center">
+                                        <p class="mb-4">"Записываюсь сюда уже больше года. Качество всегда на высоте, цены адекватные. Рекомендую всем подругам!"</p>
+                                    </blockquote>
+                                    <div class="review-author text-center">
+                                        <img src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=80&h=80&fit=crop&crop=face" alt="Мария" class="rounded-circle mb-2">
+                                        <h6 class="mb-0">Мария Иванова</h6>
+                                        <small class="text-muted">Постоянный клиент</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="display-4 fw-bold mb-4" style="color: #ffffff; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Контакты</h2>
+                    <div class="contact-info">
+                        <div class="contact-item mb-4">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <div>
+                                <h5>Адрес</h5>
+                                <p class="mb-0">ул. Астана Кесаева, 9, г. Севастополь</p>
+                            </div>
+                        </div>
+                        <div class="contact-item mb-4">
+                            <i class="bi bi-telephone-fill"></i>
+                            <div>
+                                <h5>Телефон</h5>
+                                <p class="mb-0">+7 (978) 599-59-83</p>
+                            </div>
+                        </div>
+                        <div class="contact-item mb-4">
+                            <i class="bi bi-clock-fill"></i>
+                            <div>
+                                <h5>Режим работы</h5>
+                                <p class="mb-0">Пн-Вс: 10:00 - 21:00</p>
+                            </div>
+                        </div>
+                        <div class="contact-item mb-4">
+                            <i class="bi bi-envelope-fill"></i>
+                            <div>
+                                <h5>Email</h5>
+                                <p class="mb-0">info@nailstyle-sev.ru</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links mt-4">
+                        <a href="#" class="btn btn-outline-primary me-2" data-bs-toggle="tooltip" title="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-primary me-2" data-bs-toggle="tooltip" title="Telegram">
+                            <i class="bi bi-telegram"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-primary me-2" data-bs-toggle="tooltip" title="WhatsApp">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="map-container">
+                        <div class="map-placeholder text-center">
+                            <i class="bi bi-geo-alt-fill text-primary"></i>
+                            <p class="mt-2 text-white">Интерактивная карта</p>
+                            <small class="text-white-50">Нажмите, чтобы открыть в картах</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white-50 py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 Nail & Style. Все права защищены.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Создано с ❤️ для красоты</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Вход в систему</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email *</label>
+                            <input type="email" class="form-control" id="loginEmail" required>
+                            <div class="invalid-feedback">Пожалуйста, введите корректный email</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Пароль *</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="loginPassword" required>
+                                <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </div>
+                            <div class="invalid-feedback">Пожалуйста, введите пароль</div>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Запомнить меня</label>
+                        </div>
+                    </form>
+                    <div class="text-center mt-3">
+                        <p class="mb-2">Нет аккаунта?</p>
+                        <button class="btn btn-link p-0" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal">
+                            Зарегистрироваться
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                    <button type="submit" form="loginForm" class="btn btn-primary">Войти</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Регистрация</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="registerForm" class="needs-validation" novalidate>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="regName" class="form-label">Имя *</label>
+                                <input type="text" class="form-control" id="regName" required>
+                                <div class="invalid-feedback">Пожалуйста, введите имя</div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="regSurname" class="form-label">Фамилия *</label>
+                                <input type="text" class="form-control" id="regSurname" required>
+                                <div class="invalid-feedback">Пожалуйста, введите фамилию</div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="regEmail" class="form-label">Email *</label>
+                            <input type="email" class="form-control" id="regEmail" required>
+                            <div class="invalid-feedback">Пожалуйста, введите корректный email</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="regPhone" class="form-label">Телефон *</label>
+                            <input type="tel" class="form-control" id="regPhone" required>
+                            <div class="invalid-feedback">Пожалуйста, введите телефон</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="regPassword" class="form-label">Пароль *</label>
+                                <input type="password" class="form-control" id="regPassword" required minlength="6">
+                                <div class="invalid-feedback">Пароль должен содержать минимум 6 символов</div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="regPasswordConfirm" class="form-label">Повторите пароль *</label>
+                                <input type="password" class="form-control" id="regPasswordConfirm" required>
+                                <div class="invalid-feedback">Пароли не совпадают</div>
+                            </div>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="agreeTerms" required>
+                            <label class="form-check-label" for="agreeTerms">
+                                Я согласен с <a href="#" class="text-primary">условиями использования</a> и <a href="#" class="text-primary">политикой конфиденциальности</a>
+                            </label>
+                            <div class="invalid-feedback">Необходимо согласиться с условиями</div>
+                        </div>
+                    </form>
+                    <div class="text-center mt-3">
+                        <p class="mb-2">Уже есть аккаунт?</p>
+                        <button class="btn btn-link p-0" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">
+                            Войти
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                    <button type="submit" form="registerForm" class="btn btn-primary">Зарегистрироваться</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Panel Modal -->
+    <div class="modal fade" id="adminModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Панель администратора</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs" id="adminTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="bookings-tab" data-bs-toggle="tab" data-bs-target="#bookings" type="button" role="tab">
+                                <i class="bi bi-calendar-check"></i> Заявки на запись
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="clients-tab" data-bs-toggle="tab" data-bs-target="#clients" type="button" role="tab">
+                                <i class="bi bi-people"></i> Клиенты
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="statistics-tab" data-bs-toggle="tab" data-bs-target="#statistics" type="button" role="tab">
+                                <i class="bi bi-graph-up"></i> Статистика
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="adminTabContent">
+                        <div class="tab-pane fade show active" id="bookings" role="tabpanel">
+                            <div class="d-flex justify-content-between align-items-center my-3">
+                                <h6>Заявки на запись</h6>
+                                <div class="btn-group btn-group-sm">
+                                    <button class="btn btn-outline-primary" onclick="filterBookings('all')">Все</button>
+                                    <button class="btn btn-outline-warning" onclick="filterBookings('pending')">Ожидают</button>
+                                    <button class="btn btn-outline-success" onclick="filterBookings('confirmed')">Подтверждены</button>
+                                    <button class="btn btn-outline-danger" onclick="filterBookings('cancelled')">Отменены</button>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Клиент</th>
+                                            <th>Телефон</th>
+                                            <th>Услуга</th>
+                                            <th>Дата</th>
+                                            <th>Время</th>
+                                            <th>Статус</th>
+                                            <th>Действия</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="bookingsTable">
+                                        <!-- Заявки будут загружены через JavaScript -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="clients" role="tabpanel">
+                            <div class="my-3">
+                                <h6>Клиенты</h6>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="Поиск клиентов..." id="clientSearch">
+                                    <button class="btn btn-outline-secondary" type="button">
+                                        <i class="bi bi-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Имя</th>
+                                            <th>Email</th>
+                                            <th>Телефон</th>
+                                            <th>Дата регистрации</th>
+                                            <th>Кол-во визитов</th>
+                                            <th>Статус</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="clientsTable">
+                                        <!-- Клиенты будут загружены через JavaScript -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="statistics" role="tabpanel">
+                            <div class="my-3">
+                                <h6>Статистика</h6>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="card text-center">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-primary">24</h5>
+                                                <p class="card-text">Заявок сегодня</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card text-center">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-success">156</h5>
+                                                <p class="card-text">Заявок в месяце</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card text-center">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-info">89</h5>
+                                                <p class="card-text">Активных клиентов</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card text-center">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-warning">95%</h5>
+                                                <p class="card-text">Процент выполнения</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Записаться на прием</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="bookingForm" class="needs-validation" novalidate>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="clientName" class="form-label">Имя *</label>
+                                <input type="text" class="form-control" id="clientName" required>
+                                <div class="invalid-feedback">Пожалуйста, введите ваше имя</div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="clientPhone" class="form-label">Телефон *</label>
+                                <input type="tel" class="form-control" id="clientPhone" required>
+                                <div class="invalid-feedback">Пожалуйста, введите ваш телефон</div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="clientEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="clientEmail">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="serviceSelect" class="form-label">Услуга *</label>
+                                <select class="form-select" id="serviceSelect" required>
+                                    <option value="">Выберите услугу</option>
+                                    <option value="Классический маникюр">Классический маникюр</option>
+                                    <option value="Гель-лак">Гель-лак</option>
+                                    <option value="Дизайн ногтей">Дизайн ногтей</option>
+                                    <option value="Наращивание">Наращивание</option>
+                                    <option value="Укрепление ногтей">Укрепление ногтей</option>
+                                    <option value="Педикюр">Педикюр</option>
+                                </select>
+                                <div class="invalid-feedback">Пожалуйста, выберите услугу</div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="appointmentDate" class="form-label">Дата *</label>
+                                <input type="date" class="form-control" id="appointmentDate" required>
+                                <div class="invalid-feedback">Пожалуйста, выберите дату</div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="appointmentTime" class="form-label">Время *</label>
+                            <select class="form-select" id="appointmentTime" required>
+                                <option value="">Выберите время</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:30">11:30</option>
+                                <option value="13:00">13:00</option>
+                                <option value="14:30">14:30</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:30">17:30</option>
+                                <option value="19:00">19:00</option>
+                            </select>
+                            <div class="invalid-feedback">Пожалуйста, выберите время</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="clientComment" class="form-label">Комментарий</label>
+                            <textarea class="form-control" id="clientComment" rows="3" placeholder="Дополнительные пожелания..."></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                    <button type="submit" form="bookingForm" class="btn btn-primary">Записаться</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Modal -->
+    <div class="modal fade" id="servicesModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Полный прайс-лист услуг</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Услуга</th>
+                                    <th>Описание</th>
+                                    <th>Время</th>
+                                    <th>Цена</th>
+                                    <th>Действие</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Классический маникюр</strong></td>
+                                    <td>Обработка кутикулы, придание формы, покрытие лаком</td>
+                                    <td>60 мин</td>
+                                    <td><span class="text-primary fw-bold">1500₽</span></td>
+                                    <td><button class="btn btn-sm btn-primary" data-service="Классический маникюр" onclick="openBookingModal(this)">Записаться</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Гель-лак</strong></td>
+                                    <td>Стойкое покрытие до 3 недель, богатая палитра</td>
+                                    <td>90 мин</td>
+                                    <td><span class="text-primary fw-bold">2000₽</span></td>
+                                    <td><button class="btn btn-sm btn-primary" data-service="Гель-лак" onclick="openBookingModal(this)">Записаться</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Дизайн ногтей</strong></td>
+                                    <td>Художественный дизайн, стразы, рисунки</td>
+                                    <td>120 мин</td>
+                                    <td><span class="text-primary fw-bold">от 2500₽</span></td>
+                                    <td><button class="btn btn-sm btn-primary" data-service="Дизайн ногтей" onclick="openBookingModal(this)">Записаться</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Наращивание</strong></td>
+                                    <td>Гель/акрил, любая форма и длина</td>
+                                    <td>150 мин</td>
+                                    <td><span class="text-primary fw-bold">от 3000₽</span></td>
+                                    <td><button class="btn btn-sm btn-primary" data-service="Наращивание" onclick="openBookingModal(this)">Записаться</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Укрепление ногтей</strong></td>
+                                    <td>Профессиональное укрепление натуральных ногтей</td>
+                                    <td>90 мин</td>
+                                    <td><span class="text-primary fw-bold">1800₽</span></td>
+                                    <td><button class="btn btn-sm btn-primary" data-service="Укрепление ногтей" onclick="openBookingModal(this)">Записаться</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Педикюр</strong></td>
+                                    <td>Профессиональный уход за стопами</td>
+                                    <td>120 мин</td>
+                                    <td><span class="text-primary fw-bold">2200₽</span></td>
+                                    <td><button class="btn btn-sm btn-primary" data-service="Педикюр" onclick="openBookingModal(this)">Записаться</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mt-4 p-3 bg-light rounded">
+                        <h6 class="text-primary mb-2">💎 Акции и скидки:</h6>
+                        <ul class="mb-0">
+                            <li>Скидка 15% на первое посещение</li>
+                            <li>Комплекс "Маникюр + Педикюр" - скидка 20%</li>
+                            <li>При записи на 3 процедуры - 4-я в подарок!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Toast -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="successToast" class="toast" role="alert">
+            <div class="toast-header">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                <strong class="me-auto">Успешно!</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+            </div>
+            <div class="toast-body">
+                Ваша заявка отправлена! Мы свяжемся с вами в ближайшее время.
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="btn btn-primary rounded-circle position-fixed">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    
+    <script>
+        // Helper function for service modal
+        function openBookingModal(button) {
+            const service = button.getAttribute('data-service');
+            const servicesModal = bootstrap.Modal.getInstance(document.getElementById('servicesModal'));
+            servicesModal.hide();
+            
+            setTimeout(() => {
+                const serviceSelect = document.getElementById('serviceSelect');
+                if (serviceSelect) {
+                    serviceSelect.value = service;
+                }
+                const bookingModal = new bootstrap.Modal(document.getElementById('bookingModal'));
+                bookingModal.show();
+            }, 300);
+        }
+    </script>
+
+</body>
+</html>
