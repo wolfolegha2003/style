@@ -718,9 +718,18 @@ function updateUIForLoggedInUser() {
 }
 
 function logout() {
+    // Используем logout из API клиента если доступен, иначе локальная очистка
+    if (window.ApiClient && window.ApiClient.auth && window.ApiClient.auth.logout) {
+        window.ApiClient.auth.logout();
+        return;
+    }
+    
+    // Fallback - локальная очистка
     currentUser = null;
     localStorage.removeItem('currentUser');
     sessionStorage.removeItem('currentUser');
+    localStorage.removeItem('auth_token');
+    localStorage.removeItem('user_data');
     
     // Reset UI
     const loginBtn = document.querySelector('[data-bs-target="#loginModal"], .dropdown .btn');
